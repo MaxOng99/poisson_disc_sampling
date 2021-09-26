@@ -87,7 +87,7 @@ def Bridson_sampling(num_samples=20, dims=np.array([1.0,1.0]), radius=0.05, k=30
     P.fill(np.nan)
 
     points = []
-    add_point(np.random.uniform(np.zeros(ndim), dims))
+    add_point(np.array([dims[0]/2, dims[1]/2]))
     while len(points):
         if len(P[~np.isnan(P).any(axis=ndim)]) > num_samples:
             break
